@@ -1,0 +1,9 @@
+--- # run my script on remote
+- hosts: all
+  connection: all
+  become: yes
+  become_method: sudo
+  gather_facts: no
+  tasks:
+    - name: Run scripts on remote system
+      script: /etc/ansible/myplaybooks/scripts.sh
